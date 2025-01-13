@@ -1,0 +1,16 @@
+
+run_type = "sampling"
+device = "cuda:0"
+json_out_config = "_sampling.json"
+
+[parameters]
+
+model_file = "TL_reinvent.model.chkpt"
+smiles_file = "stan_smi_1.smi"
+sample_strategy = "beamsearch"
+
+output_file = 'new_drug.csv'
+
+num_smiles = 5
+unique_molecules = true
+randomize_smiles = true

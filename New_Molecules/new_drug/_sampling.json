@@ -1,0 +1,25 @@
+{
+    "run_type": "sampling",
+    "device": "cuda:0",
+    "use_cuda": true,
+    "tb_logdir": null,
+    "json_out_config": "_sampling.json",
+    "parameters": {
+        "model_file": "TL_reinvent.model.chkpt",
+        "num_smiles": 5,
+        "smiles_file": "stan_smi_1.smi",
+        "target_smiles_path": "",
+        "sample_strategy": "beamsearch",
+        "output_file": "new_drug.csv",
+        "target_nll_file": "target_nll.csv",
+        "unique_molecules": true,
+        "randomize_smiles": true
+    },
+    "scoring": null,
+    "scheduler": null,
+    "responder": null,
+    "stage": null,
+    "learning_strategy": null,
+    "diversity_filter": null,
+    "inception": null
+}
