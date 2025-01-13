@@ -1,0 +1,23 @@
+
+run_type = "transfer_learning"
+device = "cpu"
+tb_logdir = "tb_TL"
+json_out_config = "json_transfer_learning.json"
+
+[parameters]
+
+num_epochs = 50
+save_every_n_epochs = 2
+batch_size = 50
+sample_batch_size = 100
+num_refs = 100
+
+input_model_file = "/home/zhouhao/REINVENT4/priors/mol2mol_scaffold_generic.prior"
+output_model_file = "TL_reinvent.model"
+smiles_file = "train.smi"
+validation_smiles_file = "validation.smi"
+pairs.type = "tanimoto"
+pairs.upper_threshold = 1.0
+pairs.lower_threshold = 0.7
+pairs.min_cardinality = 1
+pairs.max_cardinality = 199

@@ -1,0 +1,42 @@
+{
+    "run_type": "transfer_learning",
+    "device": "cpu",
+    "use_cuda": true,
+    "tb_logdir": "tb_TL",
+    "json_out_config": "json_transfer_learning.json",
+    "parameters": {
+        "num_epochs": 50,
+        "batch_size": 50,
+        "input_model_file": "/home/zhouhao/REINVENT4/priors/mol2mol_scaffold_generic.prior",
+        "output_model_file": "TL_reinvent.model",
+        "smiles_file": "train.smi",
+        "sample_batch_size": 100,
+        "save_every_n_epochs": 2,
+        "starting_epoch": 1,
+        "shuffle_each_epoch": true,
+        "num_refs": 100,
+        "validation_smiles_file": "validation.smi",
+        "standardize_smiles": true,
+        "randomize_smiles": true,
+        "randomize_all_smiles": false,
+        "internal_diversity": false,
+        "max_sequence_length": 128,
+        "clip_gradient_norm": 1.0,
+        "pairs": {
+            "type": "tanimoto",
+            "upper_threshold": 1.0,
+            "lower_threshold": 0.7,
+            "min_cardinality": 1,
+            "max_cardinality": 199
+        },
+        "ranking_loss_penalty": false,
+        "n_cpus": 1
+    },
+    "scoring": null,
+    "scheduler": {},
+    "responder": null,
+    "stage": null,
+    "learning_strategy": null,
+    "diversity_filter": null,
+    "inception": null
+}
