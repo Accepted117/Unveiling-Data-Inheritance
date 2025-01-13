@@ -1,0 +1,16 @@
+
+run_type = "sampling"
+device = "cpu"
+json_out_config = "_sampling.json"
+
+[parameters]
+
+model_file = "TL_reinvent.model.12.chkpt"
+smiles_file = "train.smi"
+sample_strategy = "beamsearch"
+
+output_file = 'sampling.csv'
+
+num_smiles = 5
+unique_molecules = true
+randomize_smiles = true
